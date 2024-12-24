@@ -14,7 +14,7 @@ public:
 
     // TODO: 实现复制构造器
     DynFibonacci(DynFibonacci const & others) : cache(new size_t[sizeof(others) / sizeof(size_t)]), cached(others.cached){
-        std::memcpy(cache, others.cache, cached * sizeof(size_t));
+        memcpy(cache, others.cache, cached * sizeof(size_t));
     };
 
     // TODO: 实现析构器，释放缓存空间
